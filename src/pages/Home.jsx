@@ -12,23 +12,38 @@ function Home() {
         console.log(data);
     }
     useEffect(() => {
-        
+        setTimeout(() => {
             fetchUsers();
+        }, 5000);
         
     }, []);
+
+    function renderUsers() {
+       
+      
     const pixels = "3px";
-    return (
-        <div>
-            {users.map((user) => (
+    
+        
+            return users.map((user) => (
                 <Link to={`/users/${user.id}`} key={user.id}>
                     <User 
+                        
                         id={user.id} 
                         name={user.name} 
                         email={user.email} 
                         username={user.username} 
                         />
                 </Link>
-            ))}
+            )) 
+        }
+
+        function renderSkeletonLoading() {
+            return <h1>Loading...</h1>
+        }
+        
+    return (
+        <div>
+            {users.length ? renderUsers() : renderSkeletonLoading()}
         </div>
     );
 }

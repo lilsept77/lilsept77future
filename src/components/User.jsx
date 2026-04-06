@@ -1,6 +1,6 @@
 function User({id, name, email, username}) {
     return (
-    <div style={{ border: "5px solid black" }}>
+    <div style={{ border: "2px solid black" }}>
                 <div>{id}</div>
                 <div>{name}</div>
                 <div>{email}</div>
