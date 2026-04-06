@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+.todo_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  margin: 0 5px;
+}
