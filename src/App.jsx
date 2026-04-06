@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Nav from "./components/Nav";
 import Users from "./pages/Users";
+import "./pages/style.css";
 function App() {
 
   return (
